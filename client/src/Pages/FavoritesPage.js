@@ -13,8 +13,8 @@ export const FavoritesPage = ({ favorites }) => {
       );
       setImageUrls(urls);
     };
-
     getImageUrls();
+    
   }, [favorites]);
 
   const getImage = async (id) => {
@@ -32,14 +32,12 @@ export const FavoritesPage = ({ favorites }) => {
       return null;
     }
   };
-
-
-  console.log(favorites);
+console.log(favorites.length === 0)
   return (
     <>
     <NavbarPage />
       <div className="favoritePagesDiv">Favorites Movies and TV Series</div>
-      <div className="allMoviesDiv">
+      {favorites.length === 0 ? (<h2>No Movies Here xD</h2> ) : (<div className="allMoviesDiv">
         <MovieItem
           movies={favorites} 
           imageUrls={imageUrls} 
@@ -48,7 +46,7 @@ export const FavoritesPage = ({ favorites }) => {
           showDeleteIcon={true}
         />
         
-      </div>
+      </div> )}
     </>
   );
 };
