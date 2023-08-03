@@ -1,0 +1,272 @@
+/* Global styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Set a default font size and line height for better readability on smaller screens */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Mobile-first approach */
+/* For screens up to 600px width (e.g., smartphones) */
+@media screen and (max-width: 600px) {
+  .allMoviesDiv {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .movieDiv {
+    max-width: 100%;
+    margin: 0 0 20px;
+    padding: 10px;
+  }
+
+  .moviePosterContainer {
+    height: 200px;
+  }
+
+  .movieTitle {
+    font-size: 14px;
+  }
+
+  .sortingBar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* For screens between 600px and 1200px width (e.g., tablets and small laptops) */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .allMoviesDiv {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .movieDiv {
+    max-width: calc(50% - 20px);
+    margin: 0 0 20px;
+  }
+
+  .sortingBar {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* For screens larger than 1200px width (e.g., desktops) */
+@media screen and (min-width: 1201px) {
+  .allMoviesDiv {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .movieDiv {
+    max-width: calc(33.33% - 20px);
+    margin: 0 0 20px;
+  }
+
+  .sortingBar {
+    padding-left: 155px;
+    padding-right: 150px;
+  }
+}
+
+#root {
+  /* background-image: url('../assets/image.jpg');
+   */
+  background-color: #060d17;
+  color: aliceblue;
+}
+
+/* Movie container styles */
+.allMoviesDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.movieDiv {
+  max-width: 300px;
+  max-height: 200px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(123, 212, 212, 0.9);
+  background-size: auto;
+}
+
+.moviePosterContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 70%;
+  border-radius: 8px 8px 0 0;
+}
+
+.moviePosterContainer img {
+  border-radius: 6px 6px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-poster-ribbon {
+  position: absolute;
+  color: rgb(2, 2, 2);
+  width: 40px;
+  height: 40px;
+  top: 1px;
+  left: -3px;
+  opacity: 0.6;
+}
+
+.title-poster-ribbon:hover {
+  opacity: 1;
+}
+
+.movieTitle {
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 9px;
+}
+
+/* Sorting bar styles */
+.sortingBar {
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  font-size: x-large;
+}
+
+.allDiv,
+.moviesDiv,
+.tvshowsDiv {
+  position: relative;
+  margin-inline-end: 16px;
+}
+
+.sortedByDiv {
+  position: relative;
+  margin-left: auto;
+  right: 0;
+}
+
+.sortedByBar {
+  width: 5%;
+  height: 5%;
+}
+
+/* Dropdown styles */
+.dropdownDiv {
+  position: absolute;
+  display: none;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.clickedDropdownDiv {
+  position: absolute;
+  display: block;
+  background-color: white;
+  color: #060d17;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  transition: opacity 150ms ease-in-out;
+  /* Plasăm elementul deasupra imaginii folosind z-index */
+  z-index: 2;
+}
+
+.dropdown-item {
+  font-size: large;
+}
+
+/* Movie button info styles */
+.movieButtonInfo {
+  position: relative;
+  bottom: 10px;
+  left: 50%;
+  height: 30%;
+  transform: translateX(-50%);
+  background-color: lightblue;
+  border-radius: 5px;
+  border-color: lightblue;
+  box-shadow: 0 1px 1px 0;
+}
+
+/* Individual movie details styles */
+.individualMovieDetails {
+  position: fixed;
+  text-align: center;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1.5rem;
+  color: rgb(3, 3, 3);
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Movie details content styles */
+.a215315a {
+  width: 360px;
+  height: 400px;
+}
+
+.titlePart {
+  margin: 10px;
+}
+
+.releaseDatePart {
+  margin: 10px;
+}
+
+.overviewPart {
+  margin: 20px;
+}
+
+/* Close button styles */
+.closeButton {
+  background-color: #362e2e;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 90%;
+  left: 45%;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
