@@ -9,6 +9,10 @@ import { ErrorPage } from './Pages/ErrorPage';
 import { Home } from './Pages/Home';
 import { PopularMovies } from './Pages/PopularMovies';
 import { PopularSeries } from './Pages/PopularSeries';
+import { getFavoritesFromSessionStorage } from './helpers/favorites';
+import { FavoritesPage } from './Pages/FavoritesPage';
+
+const favorites = getFavoritesFromSessionStorage();
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/popular-series',
         element:<PopularSeries />
+      }, 
+      {
+        path: '/favorites',
+        element:<FavoritesPage favorites={favorites}/>
       }
     ]
   }

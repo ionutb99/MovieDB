@@ -127,6 +127,32 @@ body {
   opacity: 0.6;
 }
 
+.deleteFav {
+  position: absolute;
+  color: rgb(2, 2, 2);
+  width: 45px;
+  height: 45px;
+  right: -2px;
+  top: -5px;
+  opacity: 0.6;
+}
+
+.reportSign {
+  position: absolute;
+  color: rgb(2, 2, 2);
+  width: 45px;
+  right: -13px;
+  bottom: -42px;
+  opacity: 0.6;
+}
+
+.favoritePagesDiv {
+  font-size:x-large;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 10px 0 5px 0;
+}
+
 .title-poster-ribbon:hover {
   opacity: 1;
 }

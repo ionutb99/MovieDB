@@ -13,8 +13,8 @@ export const NavbarPage = () => {
             <Nav.Link href="popular-series">Popular Series</Nav.Link>
           </Nav>
           <NavDropdown title="Account" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Saved</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Reported</NavDropdown.Item>
+              <NavDropdown.Item href="favorites">Favorites</NavDropdown.Item>
+              <NavDropdown.Item href="reported">Reported</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Settings
